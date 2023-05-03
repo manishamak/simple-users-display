@@ -1,0 +1,30 @@
+{   
+    "name": "kw/simple-users-display",
+    "description": "This plugin helps to display users list and their characteristics",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "SimpleUsers\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimpleUsers\\Tests\\Unit\\": "tests/phpunit/unit/"
+        }
+    },
+    "require-dev": {
+        "inpsyde/php-coding-standards": "^1.0",
+        "brain/monkey": "2.*",
+        "phpunit/phpunit": "^9.6"
+    },
+    "scripts": {
+        "phpcs": "@php ./vendor/bin/phpcs --standard=Inpsyde --ignore=*/vendor/* --extensions=php .",
+        "tests": "@php ./vendor/bin/phpunit --colors=always --testdox"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
